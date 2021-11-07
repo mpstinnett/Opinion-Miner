@@ -18,6 +18,30 @@
 
 }
 
+.mainArea input[type=text] {
+	float: right;
+  	padding: 6px;
+ 	border: none;
+  	margin-top: 8px;
+  	margin-right: 16px;
+  	font-size: 17px;
+}
+
+.mainArea .search-container button {
+	float: right;
+  	padding: 6px 10px;
+ 	
+  	margin-right: 16px;
+  	background: #ddd;
+  	font-size: 17px;
+  	border: none;
+  	cursor: pointer;
+}
+
+.mainArea .search-container button:hover {
+	background: #ccc;
+}
+
 .options {
 
     text-align: right;
@@ -38,3 +62,4 @@
     float: right;
 
 }
+
