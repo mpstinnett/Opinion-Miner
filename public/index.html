@@ -2,75 +2,44 @@
 <html lang="en">
   <head>
     <title>Opinion Miner</title>
-    <meta name="description" content="A FeathersJS server">
+    <meta name="description" content="CS 3354.0W1 - Software Engineering - F21 Semester Project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+  </head> 
+          
+    <body>
+        <div class="upperHalf"></div>
+            <div class="mainArea">
+                <h1>Opinion Mining</h1>
+                <h2>Main Page</h2> 
+					<div class="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search">
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+                <p style="width: 500px">
+                    Insert text here.
+                </p>
+            </div>
+            <div class="options">
+                <div class="settings"> 
+                    <form id="Settings" method="get" action="logout.php">
+                        <br><br>
+                        <input type="button" name="settings" id="settings" onclick="location.href='userSettings.html'" value="Settings">       
+                           <b></b>    
+                    </form>
+                </div>
+                <div class="logout">
+                    <form id="logout" method="get" action="logout.php">
+                        <br><br>
+                        <input type="button" name="log" id="log" onclick="location.href='loginPage.html'" value="Log Out">       
+                               
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </body>
 
-      html, body {
-        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-        font-weight: 400;
-        font-size: 16px;
-        color: #2c3e50;
-      }
-
-      .center-text {
-        text-align: center;
-      }
-
-      main {
-        margin-top: 100px;
-        padding: 20px;
-      }
-
-      img.logo {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        margin-bottom: 30px;
-      }
-
-      h2 {
-        font-size: 2em;
-        font-weight: 100;
-      }
-
-      footer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 20px;
-      }
-
-      footer p {
-        font-weight: 300;
-        font-size: 1.0em;
-      }
-
-      a {
-        color: #3cf;
-        text-decoration: none;
-      }
-
-      a:hover,
-      a:focus {
-        color: #3cf;
-      }
-
-    </style>
-  </head>
-  <body>
-    <main class="container">
-      <img class="logo" src="favicon.ico">
-
-      <footer>
-        <p class="center-text">For more information on yeet see <a href="https://docs.feathersjs.com" title="Feathers Documentation" target="blank">docs.feathersjs.com</a>.</p>
-      </footer>
-    </main>
-  </body>
-</html>
+    </body>    
+    </html>   
