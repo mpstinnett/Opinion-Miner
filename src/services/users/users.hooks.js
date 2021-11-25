@@ -1,5 +1,8 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
+const {
+  hashPassword, protect
+} = require('@feathersjs/authentication-local').hooks;
 
 
 module.exports = {
@@ -7,14 +10,15 @@ module.exports = {
     all: [],
     find: [ authenticate('jwt') ],
     get: [ authenticate('jwt') ],
-    create: [  ],
-    update: [  authenticate('jwt') ],
-    patch: [  authenticate('jwt') ],
+    create: [ hashPassword('password') ],
+    update: [ hashPassword('password'), authenticate('jwt') ],
+    patch:  [ hashPassword('password'), authenticate('jwt') ],
     remove: [ authenticate('jwt') ]
   },
 
   after: {
     all: [ 
+      protect('password')
     ],
     find: [],
     get: [],

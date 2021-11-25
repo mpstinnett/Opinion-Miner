@@ -18,6 +18,7 @@ const channels = require('./channels');
 const authentication = require('./authentication');
 
 const mongodb = require('./mongodb');
+const MongoClient = require('mongodb/lib/mongo_client');
 
 const app = express(feathers());
 
@@ -37,7 +38,6 @@ app.use('/', express.static('public'));
 
 // Set up Plugins and providers
 app.configure(express.rest());
-
 
 app.configure(mongodb);
 
