@@ -1,0 +1,52 @@
+<!-- 
+This module is for establishing the main page of the web application. Users will be able to access the 
+logout button and settings button here which will redirect them to their labeled location. In addition, 
+User's will be able to access the search bar on this page and use the submit button to enter and submit 
+their entered term. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Opinion Miner</title>
+    <meta name="description" content="CS 3354.0W1 - Software Engineering - F21 Semester Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">  
+  </head> 
+          
+    <body>
+        <div class="upperHalf"></div>
+            <div class="mainArea">
+                <h1>Opinion Mining</h1>
+                <h2>Main Page</h2> 
+					<div class="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search">
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+                <p style="width: 500px">
+                    Insert text here.
+                </p>
+            </div>
+            <div class="options">
+                <div class="settings"> 
+                    <form id="Settings" method="get" action="logout.php">
+                        <br><br>
+                        <input type="button" name="settings" id="settings" onclick="location.href='userSettings.html'" value="Settings">       
+                           <b></b>    
+                    </form>
+                </div>
+                <div class="logout">
+                    <form id="logout" method="get" action="logout.php">
+                        <br><br>
+                        <input type="button" name="log" id="log" onclick="location.href='index.html'" value="Log Out">       
+                               
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </body>
+
+    </body>    
+    </html>   
