@@ -22,6 +22,7 @@ const MongoClient = require('mongodb/lib/mongo_client');
 
 const app = express(feathers());
 
+
 // Load app configuration
 app.configure(configuration());
 // Enable security, CORS, compression, favicon and body parsing

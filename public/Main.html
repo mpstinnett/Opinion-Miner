@@ -11,23 +11,23 @@ their entered term.
     <title>Opinion Miner</title>
     <meta name="description" content="CS 3354.0W1 - Software Engineering - F21 Semester Project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">  
-  </head> 
-          
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="client.js"></script>  
+  
+</head> 
     <body>
+        
         <div class="upperHalf"></div>
             <div class="mainArea">
                 <h1>Opinion Mining</h1>
                 <h2>Main Page</h2> 
-					<div class="search-container">
-						<form action="/action_page.php">
-							<input type="text" placeholder="Search.." name="search">
-							<button type="submit">Submit</button>
-						</form>
-					</div>
-                <p style="width: 500px">
-                    Insert text here.
-                </p>
+                <form action = "/cgi-bin/hello_get.cgi" method = "get">
+                    Enter text to analyze here.
+                    <br>
+                    <textarea rows = "5" cols = "60" name = "description">
+                    </textarea><br>
+                    <input type = "submit" value = "submit" />
+                 </form>
             </div>
             <div class="options">
                 <div class="settings"> 
@@ -41,7 +41,7 @@ their entered term.
                     <form id="logout" method="get" action="logout.php">
                         <br><br>
                         <input type="button" name="log" id="log" onclick="location.href='index.html'" value="Log Out">       
-                               
+                        
                     </form>
                 </div> 
             </div>
