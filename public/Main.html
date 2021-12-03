@@ -26,7 +26,9 @@ their entered term.
             <li><img id="logo-edit" src="img/logo.png"></li>
             <li id="website-title">Opinon Miner!</li>
 
-            <!--Search bar has to be centered-->
+            <!--Search bar has to be centered 
+            Note: it's currently removed because I couldn't get it centered
+            I can probably fix this by putting the search bar in a div that takes up a lot of space-->
             <!--<input type="text" class="search-form" placeholder="Search...">-->
 
             <!--float: right items have to be placed in reverse order-->
@@ -35,15 +37,28 @@ their entered term.
         </ul>
     </header>
 
-    <!--First div should contain Trending Topics-->
-    <div class="topic-div">
-        <p>Div 1</p>
+    <!--The reason the Trending headers are buttons is to enable future implementation of viewing
+    a page of just trending topics, posts, or etc. in the future-->
+    <!--First div should contain Trending Topics Header-->
+    <div class="trending-div">
+        <button type="submit" class="trending-button" href="#TrendingTopics">Trending Topics</button>
     </div>
 
-    <!--Second Div should contain Trending posts-->
-    <div class="post-div">
-        <p>Div 2</p>
+    <!--Second div should contain Trending Topics Graphs-->
+    <div>
+        <p>Trending Topics Graphs</p>
     </div>
+
+    <!--Third Div should contain Trending Posts Header-->
+    <div class="trending-div">
+        <button type="submit" class="trending-button" href="#TrendingTopics">Trending Posts</button>
+    </div>
+
+    <!--Fourth div should contain Trending Posts Graphs-->
+    <div>
+        <p>Trending Posts Graphs</p>
+    </div>
+
 
     <!--Footer bar should contain extraneous links-->
     <!-- Removed for now

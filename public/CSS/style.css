@@ -43,13 +43,21 @@ footer{
 */
 
 /*Change the difference in the two heights to be based on a percentage*/
-.topic-div{
+.trending-div{
 	margin-top: 200px;
     margin-bottom: 20px;
 }
 
-.post-div{
-	margin-top: 180px;
+.trending-button{
+	background-color: rgb(112, 58, 240);
+	color: white;
+    margin-top: 24px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0.5px solid transparent;
+    font-size: 14px;
+	font-family: sans-serif;
+    font-weight: 0px;
 }
 
 .header-buttons{
