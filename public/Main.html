@@ -6,18 +6,50 @@ their entered term.
 -->
 
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
+
+<head>
+    <!--Shortcut info-->
     <title>Opinion Miner!</title>
-    <meta name="description" content="CS 3354.0W1 - Software Engineering - F21 Semester Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="client.js"></script>  
-  
 </head> 
-    <body>
-        
-        
-    </body>
-  
-    </html>   
+
+<body>
+    <!--Header bar that contains logo, Name of webstie, search bar,
+    settings button and log out button-->
+    <header>
+        <!--We use an unorder list to allow for all items to stay on the same level of the header-->
+        <ul>
+            <li><img id="logo-edit" src="img/logo.png"></li>
+            <li id="website-title">Opinon Miner!</li>
+
+            <!--Search bar has to be centered-->
+            <!--<input type="text" class="search-form" placeholder="Search...">-->
+
+            <!--float: right items have to be placed in reverse order-->
+            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='index.html'">Log Out</button><div></li>
+            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button><div></li>
+        </ul>
+    </header>
+
+    <!--First div should contain Trending Topics-->
+    <div class="topic-div">
+        <p>Div 1</p>
+    </div>
+
+    <!--Second Div should contain Trending posts-->
+    <div class="post-div">
+        <p>Div 2</p>
+    </div>
+
+    <!--Footer bar should contain extraneous links-->
+    <!-- Removed for now
+    <footer>
+        <p>Footer</p>
+    </footer>
+    -->
+
+</body>
+</html>
