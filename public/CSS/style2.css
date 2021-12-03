@@ -145,3 +145,78 @@ form .user-details .input-box{
     flex-direction: column;
   }
 }
+
+
+.facebook input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.instagram input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.reddit input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.twitter input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.delete input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: #fff;
+	color: #000;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.logout input[type="submit"]
+{
+	border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: rgb(154, 210, 255);
+	color: #000;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+}

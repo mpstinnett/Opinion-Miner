@@ -8,7 +8,7 @@ The settings displayed in this settings page will apply only to that user's acco
     <head>    
         <link rel="icon" href="img/logo.png">
         <title>User Settings</title>    
-        <link rel="stylesheet" type="text/css" href="css/style.css">    
+        <link rel="stylesheet" type="text/css" href="css/style2.css">    
     </head> 
           
     <body>
@@ -17,6 +17,13 @@ The settings displayed in this settings page will apply only to that user's acco
                 <h2>User Settings</h2> 
                 <input type="checkbox" id="check">    
                     <span>Private Account<br><br></span>
+            
+            <div class="logout">
+                <form action="Main.html">    
+                    <input type="submit" name="" value="Confirm Settings">
+                </form>     
+            </div>
+            <br>
             <div class="facebook">
                 <form action="Main.html">
                     <input type="submit" name="" value="Connect Facebook">
@@ -53,13 +60,6 @@ The settings displayed in this settings page will apply only to that user's acco
                 </form>
             </div>
 
-            </div>
-            <div class="logout">    
-                <form id="logout" method="get" action="logout.php">
-                    <br><br> 
-                    <input type="button" name="confirm" id="confirm" onclick="location.href='Main.html'" value="Confirm Settings">       
-                    <br><br>        
-                </form>     
             </div>
         </div>
     </body>
