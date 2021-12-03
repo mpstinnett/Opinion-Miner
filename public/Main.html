@@ -39,6 +39,10 @@ their entered term.
 
     <!--The reason the Trending headers are buttons is to enable future implementation of viewing
     a page of just trending topics, posts, or etc. in the future-->
+    <!--We're also using lists to contain the trending items because that'll make it easier to update in the future
+    and it makes them formatted correctly too. We're also just using images because images can have links in them
+    that users can click to be redirected to a new page-->
+
     <!--First div should contain Trending Topics Header-->
     <div class="trending-div">
         <button type="submit" class="trending-button" href="#TrendingTopics">Trending Topics</button>
@@ -46,7 +50,12 @@ their entered term.
 
     <!--Second div should contain Trending Topics Graphs-->
     <div>
-        <p>Trending Topics Graphs</p>
+        <ul>
+            <!--The links on the images just redirect back to the same html page they're on-->
+            <li><a href="Main.html"><img class= "trending-graph" src="img/Graph Topic 1.png"></a></li>
+            <li><a href="Main.html"><img class= "trending-graph" src="img/Graph Topic 2.png"></a></li>
+            <li><a href="Main.html"><img class= "trending-graph" src="img/Graph Topic 3.png"></a></li>
+        </ul>
     </div>
 
     <!--Third Div should contain Trending Posts Header-->
@@ -56,7 +65,11 @@ their entered term.
 
     <!--Fourth div should contain Trending Posts Graphs-->
     <div>
-        <p>Trending Posts Graphs</p>
+        <ul>
+            <li><img id="logo-edit" src="img/logo.png"></li>
+            <li><img id="logo-edit" src="img/logo.png"></li>
+            <li><img id="logo-edit" src="img/logo.png"></li>
+        </ul>
     </div>
 
 

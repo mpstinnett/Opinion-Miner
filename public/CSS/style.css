@@ -43,8 +43,10 @@ footer{
 */
 
 /*Change the difference in the two heights to be based on a percentage*/
+/*I've hardcoded the margins to be like this to allow the headers to not conflict with each other
+when in a normal window size of like 1920x1080, but if you resize it too small there's some conflicts*/
 .trending-div{
-	margin-top: 200px;
+	margin-top: 240px;
     margin-bottom: 20px;
 }
 
@@ -58,6 +60,12 @@ footer{
     font-size: 14px;
 	font-family: sans-serif;
     font-weight: 0px;
+}
+
+.trending-graph{
+	max-height: 200px;
+	height:auto;
+	width: auto;
 }
 
 .header-buttons{
