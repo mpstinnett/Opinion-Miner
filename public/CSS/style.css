@@ -1,65 +1,89 @@
-.leftSidebar { 
-
-    text-align: left;
-    float: left;
+body{
+	margin: 0;
+	padding: 0;
+	background: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
 }
 
-.login {
-
-    text-align: right;
-    float: right;
-
+.loginbox{
+	width:320px;
+	height: 420px;
+	background: #000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
 }
 
-.mainArea {
-
-    text-align: left;
-    float: left;
-
+.avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
 }
 
-.mainArea input[type=text] {
-	float: right;
-  	padding: 6px;
- 	border: none;
-  	margin-top: 8px;
-  	margin-right: 16px;
-  	font-size: 17px;
+h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
 }
 
-.mainArea .search-container button {
-	float: right;
-  	padding: 6px 10px;
- 	
-  	margin-right: 16px;
-  	background: #ddd;
-  	font-size: 17px;
-  	border: none;
-  	cursor: pointer;
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
 }
 
-.mainArea .search-container button:hover {
-	background: #ccc;
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
 }
 
-.options {
-
-    text-align: right;
-    float: right;
-
+.loginbox input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
 }
 
-.settings {
-
-    
-    float: left;
-
+.loginbox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
 }
 
-.logout {
-
-   
-    float: right;
-
+.loginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
 }
 
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+
+.loginbox a:hover
+{
+	color: #ffc107
+}

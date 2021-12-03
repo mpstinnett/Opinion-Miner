@@ -3,64 +3,25 @@ For this module, user's will be able to log in to the website after inputting th
 In the event, the users don't have an account with this app, users will be able to create an account to do so. 
 -->
 <!DOCTYPE html>    
-    <html>    
-    <head>    
-        <title>Login Page</title>    
-        <link rel="stylesheet" type="text/css" href="css/style.css">    
-    </head> 
-    
+    <html>
+    <head>
+    <title>Opinion Miner</title>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    </head>
     <body>
-        <!--For something later-->
-        <div class="upperHalf"></div>
-        <!--The Website title, Subtitle, and filler paragraph next to login-->
-            <div class="leftSidebar">
-                <h1>Opinion Mining</h1>
-                <h2>Login Page</h2>
-                <p style="width: 500px">
-                </p>
-            </div>
-
-            <!--Login section-->
-            <div class="login">    
-                <form id="login" method="get" action="login.php"> 
-                    <img src="img/logo.png"
-                            alt="Opinion Mining Logo"  width="200" height="200"><br>
-                    <label><b>Username</b></label>    
-                    <input type="text" name="Uname" id="Uname" placeholder="Enter Username">    
-                    <br><br>    
-                    <label><b>Password</b></label>    
-                    <input type="Password" name="Pass" id="Pass" placeholder="Enter Password">    
-                    <br><br>    
-                    <input type="button" name="log" id="log" onclick="location.href='Main.html'" value="Log In">       
-                    <br><br>    
-                    <input type="checkbox" id="check">    
-                    <span>Remember me</span>    
-                    <br><br>    
-                    Forgot <a href="#">Password</a>    
-                </form>     
-                <hr>
-                <!--Create account section-->
-                <form id="createAccount" method="get" action="login.php"> 
-                    <h2>Create Account</h2>
-                    <label><b>First Name</b></label>    
-                    <input type="text" name="Uname" id="Uname" placeholder="Enter First Name">    
-                    <br><br>
-                    <label><b>Last Name</b></label>    
-                    <input type="text" name="Uname" id="Uname" placeholder="Enter Last Name">    
-                    <br><br>
-                    <label><b>Create Username</b></label>    
-                    <input type="text" name="Uname" id="Uname" placeholder="Enter Username">    
-                    <br><br>    
-                    <label><b>Create Password</b></label>    
-                    <input type="Password" name="Pass" id="Pass" placeholder="Enter Password">    
-                    <br><br>
-                    <label><b>Re-Enter Password</b></label>    
-                    <input type="Password" name="Pass" id="Pass" placeholder="Re-Enter Password">    
-                    <br><br>
-                    <input type="button" name="log" id="log" onclick="location.href='index.html'" value="Create Account">       
-                    <br><br>    
-            </div>
+        <div class="loginbox">
+        <img src="img/logo.png" class="avatar">
+            <h1>Login Here</h1>
+            <form>
+                <p>Username</p>
+                <input type="text" name="" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="" placeholder="Enter Password">
+                <input type="submit" name="" value="Login">
+                <a href="#">Lost your password?</a><br>
+                <a href="#">Don't have an account?</a>
+            </form>
         </div>
-          
-    </body>    
-    </html>     
+    </body>
+    
+    </html>
