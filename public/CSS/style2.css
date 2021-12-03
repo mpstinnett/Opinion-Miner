@@ -23,16 +23,17 @@ body{
 }
 .container .title{
   font-size: 25px;
-  font-weight: 500;
+  font-weight: bold;
   position: relative;
+  text-align: center;
 }
 .container .title::before{
   content: "";
   position: absolute;
-  left: 0;
+  left: 100;
   bottom: 0;
   height: 3px;
-  width: 30px;
+  width: 250px;
   border-radius: 20px;
   background: linear-gradient(135deg, #272ada, #76e4cc);
 }
