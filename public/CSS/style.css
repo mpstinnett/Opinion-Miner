@@ -145,6 +145,62 @@ h1{
 	border-radius: 20px;
 }
 
+.facebook input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.instagram input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.reddit input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.twitter input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.delete input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fff;
+	color: #000;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
 .loginbox input[type="submit"]:hover
 {
 	cursor: pointer;
