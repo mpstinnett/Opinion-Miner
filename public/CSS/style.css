@@ -8,6 +8,81 @@ body{
 	font-family: sans-serif;
 }
 
+header {
+    position: fixed;
+    top: 0;
+	left: 0;
+    width: 100%;
+	background-color: black;
+}
+
+/*Changing the size of the unorder list to make the top smaller,
+that way the gap between the top and bottom of the logo is more even*/
+ul{
+	margin-top: 0;
+	padding: 0px 0px;
+}
+
+li{
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 8px 8px;
+}
+
+/* I'm removing the footer for now
+footer{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-family: -apple-system, 'Roboto', sans-serif;
+    font-weight: 350;
+    font-size: 14px;
+}
+*/
+
+/*Change the difference in the two heights to be based on a percentage*/
+.topic-div{
+	margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+.post-div{
+	margin-top: 180px;
+}
+
+.header-buttons{
+	background-color:#4585f4;
+	color: white;
+    margin-top: 24px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0.5px solid transparent;
+    font-size: 14px;
+	font-family: sans-serif;
+    font-weight: 0px;
+}
+
+#website-title{
+	margin-top: 24px;
+	font-size: 32px;
+	color: white;
+}
+
+#logo-edit{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+/*Stuff from the other members*/
+.leftSidebar { 
+
+    text-align: left;
+    float: left;
+}
+
 .loginbox{
 	width:320px;
 	height: 420px;
