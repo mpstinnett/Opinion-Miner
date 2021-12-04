@@ -51,9 +51,9 @@ when in a normal window size of like 1920x1080, but if you resize it too small t
 }
 
 .trending-button{
-	background-color: rgb(112, 58, 240);
+	background-color: #000;
 	color: white;
-    margin-top: 24px;
+    margin-top: 0px;
     padding: 10px 20px;
     border-radius: 20px;
     border: 0.5px solid transparent;
