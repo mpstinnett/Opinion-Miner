@@ -32,7 +32,19 @@ their entered term.
             <!--<input type="text" class="search-form" placeholder="Search...">-->
 
             <!--float: right items have to be placed in reverse order-->
-            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='index.html'">Log Out</button><div></li>
+            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="userVerify()">Log Out</button>
+              <script>
+                function userVerify()
+					      {
+						      var verify = confirm("Are you sure you want to log out?");
+						      if (verify == true) {
+							     var a = location.href='index.html'
+						      }
+					      }
+					    </script>
+              <div>
+            </li>
+              
             <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button><div></li>
         </ul>
     </header>
