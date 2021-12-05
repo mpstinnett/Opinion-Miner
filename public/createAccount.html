@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CSS/style2.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+     <script src="//unpkg.com/@feathersjs/client@^4.5.11/dist/feathers.js"></script>
+  </head>
 <body>
+  <div id="createAccount" class="flex flex-column"></div>
   <div class="container">
     <div class="title">Create New Account</div>
     <div class="content">
@@ -15,27 +18,27 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" name="fullname" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" name="username" nplaceholder="Enter your username" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" name="email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <input type="text" name="phonenumber" placeholder="Enter your number" required>
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <input type="text" name="password" placeholder="Enter your password" required>
           </div>
-          <div class="input-box">
+          <div class="input-box" id="confirmpassword">
             <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <input type="text" name="confirmpassword" placeholder="Confirm your password" required>
           </div>
         </div>
         <div class="gender-details">
@@ -61,11 +64,10 @@
         <!--This is the register button, it currently links back to the login page with no authentication,
         which means you can just click the button with no fields inputted-->
         <div class="button">
-          <input type="submit" value="Register" onclick="location.href='index.html'">
+          <input type="button" id="register" value="Register" class="block register">
         </div>
-        <script src="createAccount.js"></script>
     </div>
-  </div>
-
+    </div>
+  <script src="createAccount.js"></script>
 </body>
 </html>

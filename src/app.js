@@ -9,7 +9,6 @@ const feathers = require('@feathersjs/feathers');
 const configuration = require('@feathersjs/configuration');
 const express = require('@feathersjs/express');
 
-
 const middleware = require('./middleware');
 const services = require('./services');
 const appHooks = require('./app.hooks');
@@ -18,8 +17,6 @@ const channels = require('./channels');
 const authentication = require('./authentication');
 
 const mongodb = require('./mongodb');
-const MongoClient = require('mongodb/lib/mongo_client');
-
 const app = express(feathers());
 
 
@@ -35,13 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
-app.use('/', express.static('public'));
+app.use('/', express.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(express.rest());
 
 app.configure(mongodb);
-
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);

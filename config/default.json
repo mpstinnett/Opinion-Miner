@@ -58,5 +58,6 @@
       }
     }
   },
-  "mongodb": "mongodb://localhost:27017/opinion_miner"
+  "mongodb": "mongodb+srv://admin:admin@cluster0.vwnfr.mongodb.net/Cluster0?retryWrites=true&w=majority",
+  "database": "opinion_miner"
 }
