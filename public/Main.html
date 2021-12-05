@@ -17,7 +17,7 @@ their entered term.
 </head> 
 
 <body>
-    <!--Header bar that contains logo, Name of webstie, search bar,
+    <!--Header bar that contains logo, Name of website, search bar,
     settings button and log out button-->
     <header>
         <!--We use an unorder list to allow for all items to stay on the same level of the header-->
@@ -28,8 +28,9 @@ their entered term.
             <!--Search bar has to be centered 
             Note: it's currently removed because I couldn't get it centered
             I can probably fix this by putting the search bar in a div that takes up a lot of space-->
-            <!--<input type="text" class="search-form" placeholder="Search...">-->
-
+            <li style="position:absolute;left:40%;bottom:30%;"><div>
+                <input type="text" class="search-form" placeholder="Search...">
+            </div></li>
             <!--float: right items have to be placed in reverse order-->
             <li style="float:right"><div><button type="submit" class="header-buttons" onclick="userVerify()">Log Out</button>
               <script>
@@ -41,10 +42,12 @@ their entered term.
 						      }
 					      }
 					    </script>
-              <div>
+              </div>
             </li>
               
-            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button><div></li>
+            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button></div></li>
+
+            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='sentimentAnalysis_testPage.html'">Sentiment Analysis Test</button></div></li>
         </ul>
     </header>
 

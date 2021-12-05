@@ -219,3 +219,40 @@ form .user-details .input-box{
 	border-radius: 20px;
 	font-weight: bold;
 }
+
+.leftSidebarSentiment
+{
+  position:absolute;
+  left:50%;
+}
+
+.sentimentAnalysis_return input[type="submit"]
+{
+  border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: rgb(154, 210, 255);
+	color: #000;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.sentimentAnalysis_calculate input[type="submit"]
+{
+  border: none;
+	outline: none;
+    height: 40px;
+    width: 300px;
+	background: rgb(154, 210, 255);
+	color: #000;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.sentimentAnalysis_score
+{
+  font-size: 60px;
+}
