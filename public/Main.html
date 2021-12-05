@@ -20,19 +20,18 @@ their entered term.
     <!--Header bar that contains logo, Name of website, search bar,
     settings button and log out button-->
     <header>
-        <!--We use an unorder list to allow for all items to stay on the same level of the header-->
+        <!--We use an unordered list to allow for all items to stay on the same level of the header-->
         <ul>
             <li><img id="logo-edit" src="img/logo.png"></li>
             <li id="website-title">Opinon Miner!</li>
 
-            <!--Search bar has to be centered 
-            Note: it's currently removed because I couldn't get it centered
-            I can probably fix this by putting the search bar in a div that takes up a lot of space-->
-            <li style="position:absolute;left:40%;bottom:30%;"><div>
-                <input type="text" class="search-form" placeholder="Search...">
-            </div></li>
-            <!--float: right items have to be placed in reverse order-->
-            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="userVerify()">Log Out</button>
+            <!--Search Form-->
+            <li style="position:absolute;left:33%;bottom:20%;">
+                    <input type="text" class="search-form" placeholder="Search...">
+            </li>
+
+            <!-- Header Buttons; Note: float: right items have to be placed in reverse order-->
+            <li style="float:right"><button type="submit" class="header-buttons" onclick="userVerify()">Log Out</button>
               <script>
                 function userVerify()
 					      {
@@ -41,13 +40,11 @@ their entered term.
 							     var a = location.href='index.html'
 						      }
 					      }
-					    </script>
-              </div>
+				</script>
             </li>
-              
-            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button></div></li>
-
-            <li style="float:right"><div><button type="submit" class="header-buttons" onclick="location.href='sentimentAnalysis_testPage.html'">Sentiment Analysis Test</button></div></li>
+            
+            <li style="float:right"><button type="submit" class="header-buttons" onclick="location.href='userSettings.html'">Settings</button></li>
+            <li style="float:right"><button type="submit" class="header-buttons" onclick="location.href='sentimentAnalysis_testPage.html'">Sentiment Analysis Test</button></li>
         </ul>
     </header>
 
