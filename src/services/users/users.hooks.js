@@ -8,9 +8,9 @@ const {
 module.exports = {
   before: {
     all: [],
-    find: [ authenticate('jwt') ],
-    get: [ authenticate('jwt') ],
-    create: [ hashPassword('password') ],
+    find: [ ],
+    get: [ ],
+    create: [ ],
     update: [ hashPassword('password'), authenticate('jwt') ],
     patch:  [ hashPassword('password'), authenticate('jwt') ],
     remove: [ authenticate('jwt') ]
@@ -18,7 +18,6 @@ module.exports = {
 
   after: {
     all: [ 
-      protect('password')
     ],
     find: [],
     get: [],
