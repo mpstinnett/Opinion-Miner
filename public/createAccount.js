@@ -20,7 +20,25 @@ addEventListener('#register', 'click', async () => {
   const credentials = getCredentials();
   const confirmpassword = document.querySelector('[name="confirmpassword"]').value;
 
-  //TODO: input validation  - medium difficulty
+  //input validation
+
+    //empty field
+  if (credentials.fullname == "" || credentials.username == "" || credentials.email == "" || credentials.phonenumber == "" || credentials.password == "" || confirmpassword == "") {
+    try {
+      await app.service('users').create(credentials);
+    } catch (error) {
+      console.error(error);
+      renderError(
+        document.getElementById('username'),
+        `<div id="emptyError"><p>There is an empty field!<p></div>`
+      );
+      fade(document.getElementById('emptyError'));
+      return;
+    }
+    window.location.replace('index.html?flag=AccountCreationSuccess');
+  }
+  
+  //password and username do not match
   if (credentials.password === confirmpassword) {
     try {
       await app.service('users').create(credentials);
@@ -28,8 +46,9 @@ addEventListener('#register', 'click', async () => {
       console.error(error);
       renderError(
         document.getElementById('username'),
-        `<div id="createAccountErorr"><p>Username and Password Combination already exists!<p></div>`
+        `<div id="createAccountError"><p>Username and Password Combination already exists!<p></div>`
       );
+      fade(document.getElementById('createAccountError'));
       return;
     }
     window.location.replace('index.html?flag=AccountCreationSuccess');
