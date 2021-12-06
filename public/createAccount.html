@@ -8,9 +8,10 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
      <script src="//unpkg.com/@feathersjs/client@^4.5.11/dist/feathers.js"></script>
+     <script src="/socket.io/socket.io.js"></script>
   </head>
 <body>
-  <div id="createAccount" class="flex flex-column"></div>
+  <div id="createAccount" class="flex flex-column">
   <div class="container">
     <div class="title">Create New Account</div>
     <div class="content">
@@ -20,9 +21,9 @@
             <span class="details">Full Name</span>
             <input type="text" name="fullname" placeholder="Enter your name" required>
           </div>
-          <div class="input-box">
+          <div class="input-box" id="username">
             <span class="details">Username</span>
-            <input type="text" name="username" nplaceholder="Enter your username" required>
+            <input type="text"  name="username" placeholder="Enter your username" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
@@ -68,6 +69,7 @@
         </div>
     </div>
     </div>
+  </div>
   <script src="createAccount.js"></script>
 </body>
 </html>

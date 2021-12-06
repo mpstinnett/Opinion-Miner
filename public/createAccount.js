@@ -1,5 +1,9 @@
+const socket = io();
 const app = feathers();
+
+app.configure(feathers.socketio(socket));
 app.configure(feathers.authentication());
+
 
 const escape = str => str.replace(/&/g, '&amp;')
   .replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -15,15 +19,25 @@ const addEventListener = (selector, event, handler) => {
 addEventListener('#register', 'click', async () => {
   const credentials = getCredentials();
   const confirmpassword = document.querySelector('[name="confirmpassword"]').value;
-console.log(app.service('users'));
+
   //TODO: input validation  - medium difficulty
   if (credentials.password === confirmpassword) {
-    await app.service('users').create(credentials);
-    // await createAccount(credentials);
+    try {
+      await app.service('users').create(credentials);
+    } catch (error) {
+      console.error(error);
+      renderError(
+        document.getElementById('username'),
+        `<div id="createAccountErorr"><p>Username and Password Combination already exists!<p></div>`
+      );
+      return;
+    }
+    window.location.replace('index.html?flag=AccountCreationSuccess');
   } else {
-    document.getElementById('confirmpassword').style.color = "red";
-    document.getElementById('confirmpassword').insertAdjacentHTML('beforeend',
-      `<div id="confirmpassworderror"><p>Passwords must match!</p></div>`);
+    renderError(
+      document.getElementById('confirmpassword'),
+      `<div id="confirmpassworderror"><p>Passwords must match!</p></div>`
+    );
     fade(document.getElementById('confirmpassworderror'));
   }
 });
@@ -42,6 +56,12 @@ function fade(element) {
   }, 50);
 }
 
+function renderError(element, error){
+  element.style.color = "red";
+  element.insertAdjacentHTML('beforeend',
+    error);
+}
+
 const getCredentials = () => {
   const user = {
     fullname: escape(document.querySelector('[name="fullname"]').value),
@@ -54,6 +74,7 @@ const getCredentials = () => {
   return user;
 };
 
+
 const createAccount = async credentials => {
   try {
     if(!credentials) {
@@ -65,9 +86,8 @@ const createAccount = async credentials => {
       });
     }
 
-    //TODO
   } catch(error) {
-    //showCreateAccountHTML(error);
+    console.log('Authentication Failed, user needs to register.');
   }
 };
 
