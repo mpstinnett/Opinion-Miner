@@ -19,7 +19,8 @@ exports.Users = class Users extends Service {
       password
     };
 
-    // Call the original `create` method with existing `params` and new data
+
     return super.create(userData, params);
   }
+
 };
