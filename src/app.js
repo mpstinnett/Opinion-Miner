@@ -16,7 +16,7 @@ const appHooks = require('./app.hooks');
 const channels = require('./channels');
 const authentication = require('./authentication');
 const mongodb = require('./mongodb');
-const language = require('@google-cloud/language');
+const language = require('./gcnlp');
 
 
 
@@ -37,6 +37,7 @@ app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', express.static(app.get('public')));
 app.configure(mongodb);
+app.configure(language);
 
 // Set up Plugins and providers
 app.configure(express.rest());
@@ -49,7 +50,6 @@ app.configure(authentication);
 app.configure(services);
 // Set up event channels (see channels.js)
 app.configure(channels);
-
 
 
 // Configure a middleware for 404s and the error handler

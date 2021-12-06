@@ -14,12 +14,19 @@ const addEventListener = (selector, event, handler) => {
 };
 
 addEventListener('#submit', 'click', async () => {
-  console.log("yay")
+  const text = document.querySelector('[name="test_text"]').value;
+  app.service('gcnlp').timeout = 30000;
+  const testSentimentScoreObject = {
+    content: text,
+    type: 'PLAIN_TEXT',
+  };
+  const [sentimentResult] = await app.service('gcnlp').create(testSentimentScoreObject);
+  console.log(sentimentResult);
 });
 
 async function sentiment() {
   // Imports the Google Cloud client library
- 
+
 
   // Creates a client
   const client = new language.LanguageServiceClient();
