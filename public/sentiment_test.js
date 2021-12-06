@@ -1,16 +1,29 @@
+const socket = io();
+const app = feathers();
 
-const text 
+app.configure(feathers.socketio(socket));
+app.configure(feathers.authentication());
+
+
+const addEventListener = (selector, event, handler) => {
+  document.addEventListener(event, async ev => {
+    if (ev.target.closest(selector)) {
+      handler(ev);
+    }
+  });
+};
+
+addEventListener('#submit', 'click', async () => {
+  console.log("yay")
+});
+
 async function sentiment() {
   // Imports the Google Cloud client library
-  const language = require('@google-cloud/language');
+ 
 
   // Creates a client
   const client = new language.LanguageServiceClient();
-
-  /**
-   * TODO(developer): Uncomment the following line to run this code.
-   */
-  const text = document.querySelector('[name="text]').value;
+  const text = document.querySelector('[name="test_text"]').value;
 
   // Prepares a document, representing the provided text
   const document = {
@@ -33,5 +46,5 @@ async function sentiment() {
     console.log(`  Magnitude: ${sentence.sentiment.magnitude}`);
   });
 
-  return sentence.sentiment.score;
+  document.getElementById('SentimentScore').innerHTML = '<p>Text overall score is ${sentence.sentiment.score}<p>';
 }

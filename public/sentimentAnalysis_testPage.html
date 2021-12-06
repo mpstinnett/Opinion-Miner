@@ -4,7 +4,10 @@
     <head>    
         <link rel="icon" href="img/logo.png">
         <title>Sentiment Analysis</title>    
-        <link rel="stylesheet" type="text/css" href="CSS/style2.css">    
+        <link rel="stylesheet" type="text/css" href="CSS/style2.css"> 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+        <script src="//unpkg.com/@feathersjs/client@^4.5.11/dist/feathers.js"></script>
+        <script src="/socket.io/socket.io.js"></script>   
     </head> 
           
     <body>
@@ -14,30 +17,25 @@
                 <h4 style="text-align: left;font-size: 20px;">Testing Area</h4>
                 <br>
                 <br>
-                <input type="text" class="search-form" style="width:290px;" placeholder="Type your sentiments here...">
                 <br>
                 <br>
-                <div class="sentimentAnalysis_calculate">
-                    <form action="Main.html">    
-                        <input type="submit" name="text" value="Calculate Sentiment">
-                    </form>     
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="input-box">
+                    <span class="details">Text</span>
+                    <input type="text" name="test_text" placeholder="Enter text to test" required>
+                  </div>
+                <div class="button">
+                    <input type="button" id="submit" value="Submit">
+                  </div>
+
+                <div class="SentimentScore", id="SentimentScore">
+
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-
-                <b>
-                    <font size="+2">
-                        Sentiment Score:
-                    </font>
-                </b>
-                <b class="sentimentAnalysis_score">
-                    <body onload="document.getElementById('id_of_your_div').innerHTML = sentiment()">
-                </b>
-
                 <br>
                 <br>
                 <br>
@@ -53,6 +51,7 @@
 
             </div>
         </div>
+        <script src="sentiment_test.js"></script>
     </body>
 
     </body>    

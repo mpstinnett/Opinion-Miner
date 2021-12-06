@@ -23,7 +23,24 @@ function displayAccountCreationSuccess(){
   }
 }
 
+function clearErrors(){
+  if (document.getElementById("usernameMissingError") !== null) {
+    document.getElementById("usernameMissingError").remove()
+  }
+  
+  if (document.getElementById("passwordIncorrect") !== null) {
+    document.getElementById("passwordIncorrect").remove()
+  }
+
+  if (document.getElementById("usernameIncorrect") !== null) {
+    document.getElementById("usernameIncorrect").remove()
+  }
+  
+  document.getElementById("loginForm").style.color = "white";
+}
+
 addEventListener('#login', 'click', async () => {
+  clearErrors();
   const loginCredentials = getLoginCredentials();
   const username = loginCredentials.username;
   const password = loginCredentials.password;
@@ -37,7 +54,29 @@ addEventListener('#login', 'click', async () => {
   }
 
   try {
-    const user = await app.service('users').find(loginCredentials);
+    const users = await app.service('users').find(loginCredentials);
+    const data = users.data;
+    for(key in data) {
+      if(data.hasOwnProperty(key)) {
+          var value = data[key];
+          if (value.username === username) {
+            if (value.password !== password) {
+              renderError(
+                document.getElementById('loginForm'),
+                `<div id="passwordIncorrect"><p>Username or Password is incorrect.</p></div>`
+              );
+              return;
+            }
+            clearErrors();
+            window.location.replace('Main.html?username=' + value.username + '&email=' + value.email);
+            return;
+          }
+      }
+    }
+    renderError(
+      document.getElementById('loginForm'),
+      `<div id="usernameIncorrect"><p>Username or Password is incorrect.</p></div>`
+    );
   } catch (error) {
     console.log(error);
   }
