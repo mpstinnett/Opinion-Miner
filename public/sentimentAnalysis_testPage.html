@@ -1,8 +1,4 @@
-<!--
-In this module, users will be able to change the settings for their account. Once the user selects the confirm settings button, they will redirected to the main page
-of the website. In additon, users that have selected the delete account button, will be redirected to the login page, after their account has been deleted. 
-The settings displayed in this settings page will apply only to that user's account. 
--->
+
 <!DOCTYPE html>    
     <html>    
     <head>    
@@ -23,7 +19,7 @@ The settings displayed in this settings page will apply only to that user's acco
                 <br>
                 <div class="sentimentAnalysis_calculate">
                     <form action="Main.html">    
-                        <input type="submit" name="" value="Calculate Sentiment">
+                        <input type="submit" name="text" value="Calculate Sentiment">
                     </form>     
                 </div>
                 <br>
@@ -39,7 +35,7 @@ The settings displayed in this settings page will apply only to that user's acco
                     </font>
                 </b>
                 <b class="sentimentAnalysis_score">
-                    n/a
+                    <body onload="document.getElementById('id_of_your_div').innerHTML = sentiment()">
                 </b>
 
                 <br>
